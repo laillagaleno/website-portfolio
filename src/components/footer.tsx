@@ -1,12 +1,13 @@
 import { ArrowRight, ArrowUp, Sparkles } from "lucide-react";
 
-
 export function Footer() {
   return (
     <footer className="space-y-20">
       <section className="px-6">
-        <div className="container border-[1px] border-gray-border rounded-sm p-16 flex justify-between items-end 
-        max-lg:flex-col max-lg:gap-12 max-lg:text-center max-lg:items-center max-lg:justify-center">
+        <div
+          className="container border-[1px] border-gray-border rounded-sm p-16 flex justify-between items-end 
+        max-lg:flex-col max-lg:gap-12 max-lg:text-center max-lg:items-center max-lg:justify-center"
+        >
           <div className="flex flex-col justify-start gap-6 max-lg:items-center">
             <h2 className="text-6xl font-sans leading-tight">
               Vamos criar um <br />
@@ -35,6 +36,7 @@ export function Footer() {
               {[
                 [
                   <svg
+                    key="1"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -53,6 +55,7 @@ export function Footer() {
                 ],
                 [
                   <svg
+                    key="2"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -68,6 +71,7 @@ export function Footer() {
                 ],
                 [
                   <svg
+                    key="3"
                     width="24"
                     height="24"
                     viewBox="0 0 24 24"
@@ -86,6 +90,7 @@ export function Footer() {
                 ],
                 [
                   <svg
+                    key="4"
                     width="24"
                     height="24"
                     viewBox="0 0 16 16"
@@ -103,6 +108,7 @@ export function Footer() {
                 ],
               ].map(([icon, href, title]) => (
                 <a
+                  key={title as string}
                   href={href as string}
                   className="text-foreground border-[1px] border-gray-border rounded-md p-4"
                 >
@@ -130,7 +136,7 @@ export function Footer() {
             <div className=" text-sm text-gray-subtitle ">
               <h2>© 2024</h2>
               <h2>
-                Desenvolvido por{" "}
+                Desenvolvido por
                 <a
                   href=""
                   className="text-foreground cursor-pointer font-medium"
