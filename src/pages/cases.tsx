@@ -60,6 +60,7 @@ export function Cases() {
               after:content-[''] after:block after:clear-both ">
                 <Image
                   alt={title as string}
+                  // eslint-disable-next-line @typescript-eslint/no-explicit-any
                   src={img as any}
                   className="bg-contain bg-no-repeat w-max h-max"
                 />
