@@ -1,0 +1,108 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --black: #0a0a0a;
+  --white: rgb(255, 255, 255);
+
+
+  --background: var(--white);
+  --foreground: var(--black);
+
+  --primary: #c6a3f5;
+  --primary-dark: #b293dd;
+  --primary-light: #ede2fc;
+  
+  --gray-border: rgb(226, 229, 227);
+  --gray-border-hover: rgb(39, 39, 42);
+
+  --gray-subtitle: #334155;
+  --gray-subtitle-hover: #1e293b;
+
+}
+
+[data-theme="dark"]{
+  --background: var(--black);
+  --foreground: var(--white);
+
+  --primary: #ae8ae3;
+  --primary-dark:#9d7ccc ;
+  --primary-light:#e6dbf6 ;
+
+  --gray-border: rgb(39, 39, 42);
+  --gray-border-hover: rgb(226, 229, 227);
+
+  --gray-subtitle: rgb(255 255 255 / 0.7);
+  --gray-subtitle-hover: rgb(255 255 255 / 0.8);
+  
+}
+
+html{
+  scroll-behavior: auto !important;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .pause {
+     animation-play-state: paused;
+   }
+
+  .custom-text-color {
+    background-clip: text;
+    -webkit-background-clip: text; 
+    -webkit-text-fill-color: transparent;
+    color: var(--background);
+    display: inline;
+  }
+
+  .mask{
+    -webkit-mask-image:linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
+    mask-image: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, rgb(0, 0, 0) 15%, rgb(0, 0, 0) 85%, rgba(0, 0, 0, 0) 100%);
+  }
+
+  .container{
+    @apply max-w-[1216px] m-auto;
+  }
+
+  .subtitle{
+    @apply text-base uppercase font-medium tracking-widest text-foreground font-sans;
+  }
+
+  .stack-style{
+    background: color-mix(in srgb,var(--foreground), var(--background) 95%);
+
+    @apply w-16 h-16 rounded-full flex justify-center items-center cursor-pointer 
+    first:ml-24 mr-32 last:mr-0 [&:nth-child(6)]:mr-0 border-transparent border-[1px] hover:border-gray-border hover:animate-pulse
+  }
+
+  .stack-style:hover{
+    background: color-mix(in srgb,var(--foreground), var(--background) 90%);
+  }
+
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    list-style-type: none;
+    list-style: none;
+    text-decoration: none;
+
+   @apply transition-colors duration-75 ease-in-out will-change-transform;
+  }
+
+  body {
+    @apply font-mono text-foreground bg-background border-gray-border;
+  }
+
+
+}
