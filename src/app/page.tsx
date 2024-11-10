@@ -1,7 +1,7 @@
-import { About } from "@/pages/about";
-import { Cases } from "@/pages/cases";
+import  About  from "@/pages/about";
+import  Cases  from "@/pages/cases";
 import HomeSection from "@/pages/home"
-import { Services } from "@/pages/services";
+import Services from "@/pages/services";
 
 export default function Home() {
   return (

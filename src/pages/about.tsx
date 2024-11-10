@@ -1,7 +1,7 @@
 import Image from "next/image";
 import imgCaricatura from "../../public/assets/ilustration.svg";
 
-export function About() {
+export default function About() {
   return (
     <section
       id="about"

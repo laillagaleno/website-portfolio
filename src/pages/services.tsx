@@ -1,4 +1,4 @@
-export function Services() {
+export default function Services() {
   return (
     <section className="container flex justify-between">
       <div className="bg-slate-600">

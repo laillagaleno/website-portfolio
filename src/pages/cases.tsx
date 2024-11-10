@@ -2,7 +2,7 @@ import { ArrowDown, Workflow } from "lucide-react";
 import ilustation from "../../public/assets/tes.png";
 import Image from "next/image";
 
-export function Cases() {
+export default function Cases() {
   return (
     <section className="container py-6 space-y-6">
       <div className="flex justify-between items-center">
